@@ -11,6 +11,7 @@ const auth = require('../middlewares/auth')
 const admin = require('../middlewares/admin')
 
 function initRoutes(app) {
+	app.get('/',guest, authController().defaultlogin)
     app.get('/home',auth, homeController().index)
     app.get('/login', guest, authController().login)
     app.post('/login', authController().postLogin)

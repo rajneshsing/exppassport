@@ -7,6 +7,9 @@ function authController() {
     }
     
     return {
+		defaultlogin(req, res) {
+            res.render('auth/login')
+        },
         login(req, res) {
             res.render('auth/login')
         },
